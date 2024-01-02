@@ -29,7 +29,7 @@ const App = () => {
     try {
       setIsLoading(true);
       // console.log("authCode>> " + code);
-      const response = await axios.get(`${window.location.origin}/oauth2/callback?code=${code}`);
+      const response = await axios.get(`https://salesforce-switch.vercel.app/oauth2/callback?code=${code}`);
       const  accessToken  = await response.data.accessToken;
       const username  = await response.data.username;
       setName(username);
@@ -53,7 +53,7 @@ const App = () => {
   const fetchValidationRules = async () => {
     try {
       setIsLoading(true);
-      const response = await axios.get(`${window.location.origin}/getValidationRules`, {
+      const response = await axios.get(`https://salesforce-switch.vercel.app/getValidationRules`, {
         headers: {
           Authorization: `Bearer ${ accessToken }`,
         },
@@ -83,7 +83,7 @@ const handleSalesforceAuth = () => {
     try {
       setIsLoading(true);
       const newStatus = !currentStatus; 
-      const response = await axios.put(`${window.location.origin}/toggleValidationRule/${ruleId}`, { newStatus ,formula, errormsg});
+      const response = await axios.put(`https://salesforce-switch.vercel.app/toggleValidationRule/${ruleId}`, { newStatus ,formula, errormsg});
 
       // console.log("response.data.updatedRule");
       console.log(response.data);

@@ -161,7 +161,7 @@ async function udateValidationRuleStatus (ruleId, newStatus, accessToken, formul
   
     Metadata: {
       active:newStatus,
-      errorConditionFormula: `${formula}`, 
+      errorConditionFormula:`${formula}`, 
       errorMessage:`${errormsg}`
   
     }
