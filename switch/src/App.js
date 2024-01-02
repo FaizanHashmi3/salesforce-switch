@@ -28,7 +28,7 @@ const App = () => {
 
     try {
       setIsLoading(true);
-      console.log("authCode>> " + code);
+      // console.log("authCode>> " + code);
       const response = await axios.get(`${window.location.origin}/oauth2/callback?code=${code}`);
       const  accessToken  = await response.data.accessToken;
       const username  = await response.data.username;
@@ -101,9 +101,7 @@ function handleDisable()
 {
   setAble(true)
   validationRules.forEach(item => {
-    if(item.Metadata.active==false){
       handleToggle(item.Id, true,item.Metadata.errorConditionFormula,item.Metadata.errorMessage);
-    }
   });
   setAble(false)
   // setIsLoading(false)
@@ -113,10 +111,7 @@ async function handleEnable()
   setAble(true)
   setIsLoading(true)
   validationRules.forEach(item => {
-    if(item.Metadata.active==false){
-      handleToggle(item.Id, false,item.Metadata.errorConditionFormula,item.Metadata.errorMessage);
-    }
-    
+    handleToggle(item.Id, false,item.Metadata.errorConditionFormula,item.Metadata.errorMessage);
 });
 setAble(false)
 // setIsLoading(false)
@@ -132,7 +127,7 @@ return (
     <div style={{color:"#ff6600",fontSize:"4rem"}}>Salesforce Switch</div>
     {!accessToken ?(
       <div className='login'>
-      <h1>Login here and wait for a moment.. </h1>
+      <h1>Login here and wait for a moment...  </h1>
        <button onClick={handleSalesforceAuth}>Login</button>
    </div>
     ):(metaButton ? (isLoading ? <Loader/> :<div className='meta-page'>
