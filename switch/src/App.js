@@ -127,7 +127,7 @@ return (
     <div style={{color:"#ff6600",fontSize:"4rem"}}>Salesforce Switch</div>
     {!accessToken ?(
       <div className='login'>
-      <h1>Login here and wait for a moment  </h1>
+      <h1>Login here and wait for a moment...  </h1>
        <button onClick={handleSalesforceAuth}>Login</button>
    </div>
     ):(metaButton ? (isLoading ? <Loader/> :<div className='meta-page'>
