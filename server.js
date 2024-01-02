@@ -21,7 +21,7 @@ var url = " ";
 
 const clientId = '3MVG95mg0lk4batjVwHpPkahCROA1JXckG2MoWXqDTqMcv2sI4NjLmzIJq33BJka_FCR0TwINW3LN.Yuclvxa';
 const clientSecret = '4296A62A96D50C0A3B928A183176446BF37CE71B889293DE61607C9BD34E2AE0';
-const redirectUri = 'http://localhost:5000'; 
+const redirectUri = 'https://salesforce-switch.vercel.app'; 
 
 const salesforceAPI = 'https://cheems6-dev-ed.develop.my.salesforce.com/services/data/v33.0/tooling/sobjects/ValidationRule/';
 

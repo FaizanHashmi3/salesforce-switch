@@ -73,7 +73,7 @@ const App = () => {
 const handleSalesforceAuth = () => {
   setIsLoading(true)
   const clientId = '3MVG95mg0lk4batjVwHpPkahCROA1JXckG2MoWXqDTqMcv2sI4NjLmzIJq33BJka_FCR0TwINW3LN.Yuclvxa';
-  const redirectUri = 'http://localhost:5000'; 
+  const redirectUri = 'https://salesforce-switch.vercel.app'; 
 
   const salesforceAuthUrl = `https://login.salesforce.com/services/oauth2/authorize?client_id=${clientId}&redirect_uri=${redirectUri}&response_type=code`;
 
