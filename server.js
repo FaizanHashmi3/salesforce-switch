@@ -81,8 +81,8 @@ async function getSalesforceUsername(accessToken,instanceUrl) {
         Authorization: `Bearer ${accessToken}`
       }
     });
-    // console.log("response.data")
-      // console.log(response.data)
+    console.log("response.data")
+      console.log(response.data)
     return response.data.name;
   } catch (error) {
     console.error('Error fetching username:', error);
